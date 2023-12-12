@@ -5,9 +5,8 @@ def islower(c):
     else:
         return False
 
-def uppercase(str):
-    for c in str:
-        print("{:c}"
-                .format(ord(c) if not islower(c) else ord(c) - 32),
-                end="")
-        print("")
+def uppercase(pk):
+    for char in pk:
+        upper_char = chr(ord(char) - 32) if 'a' <= char <= 'z' else char
+        print("{}".format(upper_char), end="")
+    print()
